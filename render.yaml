@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: mythink-n8n
+    env: docker
+    plan: free
+    autoDeploy: true
+    startCommand: n8n start
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "mythink"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "Chafu0817$"
+      - key: N8N_HOST
+        value: mythink-n8n.onrender.com
+      - key: N8N_PORT
+        value: 5678
+      - key: N8N_PROTOCOL
+        value: https
+      - key: N8N_EDITOR_BASE_URL
+        value: https://mythink-n8n.onrender.com
+      - key: WEBHOOK_URL
+        value: https://mythink-n8n.onrender.com
+      - key: N8N_ENCRYPTION_KEY
+        generateValue: true
